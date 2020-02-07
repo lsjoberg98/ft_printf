@@ -6,7 +6,7 @@
 /*   By: lsjoberg <lsjoberg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/31 14:58:31 by lsjoberg          #+#    #+#             */
-/*   Updated: 2020/01/31 15:46:49 by lsjoberg         ###   ########.fr       */
+/*   Updated: 2020/02/07 16:06:28 by lsjoberg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,8 @@ void			iffloat(t_struct *f, va_list ap)
 		str = pre_converter(str, f, '+', 3);
 	if (f->minus == 1)
 		str = leftaligned(f, str);
+	else if (f->minus == 0)
+		str = rightaligned(f, str);
 	ft_putstr(str);
 	f->printed += ft_strlen(str);
 	ft_strdel(&str);

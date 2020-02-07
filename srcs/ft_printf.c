@@ -6,7 +6,7 @@
 /*   By: lsjoberg <lsjoberg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/22 17:06:35 by lsjoberg          #+#    #+#             */
-/*   Updated: 2020/02/03 17:03:43 by lsjoberg         ###   ########.fr       */
+/*   Updated: 2020/02/07 14:10:40 by lsjoberg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,13 +75,13 @@ int		formatparse(const char *format, t_struct *f, va_list ap, int pos)
 {
 	while (format[pos] != '\0')
 	{
-		if (format[pos] != '%' && format[pos])
+		if (format[pos] != '%')
 			f->printed += write(1, &format[pos], 1);
 		else if (format[pos] == '%')
 		{
 			if (!(ft_strchr(ALL, format[pos + 1]) || format[pos] == '\0'))
 				break ;
-			while (ft_strchr(ALL, format[pos + 1]))
+			while (ft_strchr(ALL, format[pos + 1]) && format[pos] != '\0')
 			{
 				pos++;
 				if (ft_strchr(CONVERSION, format[pos]))
