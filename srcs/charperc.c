@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   charperc.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lsjoberg <lsjoberg@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lsjoberg <lsjoberg@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/22 21:52:48 by lsjoberg          #+#    #+#             */
-/*   Updated: 2020/01/23 22:00:49 by lsjoberg         ###   ########.fr       */
+/*   Updated: 2020/02/08 18:33:35 by lsjoberg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,12 +43,12 @@ void	ifchar(t_struct *f, va_list ap)
 	c = (unsigned char)va_arg(ap, int);
 	if (f->minus == 0 && f->width)
 	{
-		if (f->zero != 0)
+		if (f->zero == 1)
 			printzero(f, nb);
 		else if (!f->zero)
 			printspace(f, nb);
 	}
-	else if (f->width && f->minus == 1)
+	if (f->width && f->minus == 1)
 	{
 		ft_putchar(c);
 		printspace(f, nb);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   helper_conv.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lsjoberg <lsjoberg@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lsjoberg <lsjoberg@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/24 19:09:40 by lsjoberg          #+#    #+#             */
-/*   Updated: 2020/02/05 17:00:49 by lsjoberg         ###   ########.fr       */
+/*   Updated: 2020/02/08 18:33:44 by lsjoberg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,7 +110,7 @@ char	*rightaligned(t_struct *f, char *str)
 			&& !f->precision)
 			return (joint = converter_r(str, nb, f, '0'));
 		else if (f->zero && f->width > 0 && f->conv3)
-			return	(joint = converter_r(str, nb, f, '0'));
+			return (joint = converter_r(str, nb, f, '0'));
 		else if (f->zero && !f->precision)
 		{
 			joint = converter_r(str, nb, f, '0');
@@ -122,5 +122,4 @@ char	*rightaligned(t_struct *f, char *str)
 	if (nb < 0 && f->nb > 0 && f->conv2)
 		return (joint = swap_zero_x_r(str, '0', 0));
 	return (str);
-	
 }
