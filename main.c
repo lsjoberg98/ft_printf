@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lsjoberg <lsjoberg@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lsjoberg <lsjoberg@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/02 18:17:04 by lsjoberg          #+#    #+#             */
-/*   Updated: 2020/02/02 21:21:31 by lsjoberg         ###   ########.fr       */
+/*   Updated: 2020/02/08 18:35:08 by lsjoberg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,29 +23,29 @@
  	** ****************** RANDOMG TESTS ******************
  	*/
 	
- 	// ft_printf("RANDOMG TESTS\n");
+ 	ft_printf("RANDOMG TESTS\n");
 
- 	//ft_printf("This is a String\n");
- 	//printf("%d\n", ft_printf("This is a String\n"));
+ 	ft_printf("This is a String\n");
+ 	printf("%d\n", ft_printf("This is a String\n"));
 
-	// ft_printf("%-5");
-	// printf("%-5");
+	 ft_printf("%-5");
+	 printf("%-5");
+ 
+	ft_printf("%5");
 
-	// ft_printf("%5");
-
-	// printf("'{%f}'\n'{%lf}'\n'{%Lf}'\n", 1.42, 1.42, 1.42l);
+	printf("'{%f}'\n'{%lf}'\n'{%Lf}'\n", 1.42, 1.42, 1.42l);
 	
-	// ft_printf("'{%f}'\n'{%lf}'\n'{%Lf}'\n", 1.42, 1.42, 1.42l);
+	ft_printf("'{%f}'\n'{%lf}'\n'{%Lf}'\n", 1.42, 1.42, 1.42l);
 
-	// printf("PRINTF: \n'%.0p'\n'%.p'\n", 0, 0);
-	// ft_printf("FT_PRINTF: \n'%.0p'\n'%.p'\n", 0, 0);
+	printf("PRINTF: \n'%.0p'\n'%.p'\n", 0, 0);
+	ft_printf("FT_PRINTF: \n'%.0p'\n'%.p'\n", 0, 0);
 
-	//printf("hello, %s.", "gavin");
+	printf("hello, %s.", "gavin");
 	
 	
-	// printf("%-5");
-	// printf("\n");
-	//printf("%d\n", ft_printf("%-5\n"));
+	printf("%-5");
+	printf("\n");
+	printf("%d\n", ft_printf("%-5\n"));
 
 	ft_printf("'%100c'\n", 0);
 	printf("'%100c'\n", 0);
