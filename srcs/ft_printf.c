@@ -6,7 +6,7 @@
 /*   By: lsjoberg <lsjoberg@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/22 17:06:35 by lsjoberg          #+#    #+#             */
-/*   Updated: 2020/02/08 18:33:39 by lsjoberg         ###   ########.fr       */
+/*   Updated: 2020/02/10 18:59:04 by lsjoberg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,12 @@ void	bezerostruct2(t_struct *f)
 	f->x = 0;
 }
 
+/*
+**	Checks for flags and if it finds any it calls the modifier
+**	else it goes to the distributor and after that sets struct to 0
+**	but keeps the position of i
+*/
+
 int		parsel(t_struct *f, int pos, const char *format, va_list ap)
 {
 	f->i = pos;
@@ -70,6 +76,10 @@ int		parsel(t_struct *f, int pos, const char *format, va_list ap)
 		return (pos);
 	return (pos - 1);
 }
+
+/*
+**	Checks the format for what comes after the '%' sign and calls the parsel
+*/
 
 int		formatparse(const char *format, t_struct *f, va_list ap, int pos)
 {

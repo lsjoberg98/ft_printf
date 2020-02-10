@@ -6,11 +6,16 @@
 /*   By: lsjoberg <lsjoberg@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/22 21:52:48 by lsjoberg          #+#    #+#             */
-/*   Updated: 2020/02/08 18:33:35 by lsjoberg         ###   ########.fr       */
+/*   Updated: 2020/02/10 16:21:03 by lsjoberg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
+
+/*
+**	Prints zeroes/spaces depending on the value of minus and zero
+**	and prints the '%' sign too.
+*/
 
 void	ifperc(t_struct *f)
 {
@@ -33,6 +38,12 @@ void	ifperc(t_struct *f)
 		ft_putchar('%');
 	f->printed++;
 }
+
+/*
+**	If zero = 1 print zeroes, otherwise print spaces and
+**	and then do putchar(c) and some spaces if minus = 1,
+**	otherwise just putchar(c).
+*/
 
 void	ifchar(t_struct *f, va_list ap)
 {

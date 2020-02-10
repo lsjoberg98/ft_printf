@@ -6,7 +6,7 @@
 /*   By: lsjoberg <lsjoberg@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/23 20:48:55 by lsjoberg          #+#    #+#             */
-/*   Updated: 2020/02/08 18:34:20 by lsjoberg         ###   ########.fr       */
+/*   Updated: 2020/02/10 15:44:37 by lsjoberg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	ifpointer(t_struct *f, va_list ap)
 	joint = ft_strjoin("0x", str);
 	nb = f->width - (ft_strlen(joint));
 	if ((f->minus == 0 && nb > 0))
-	(f->zero == 1) ? printzero(f, nb) : printspace(f, nb);
+		(f->zero == 1) ? printzero(f, nb) : printspace(f, nb);
 	if (f->minus == 1 && nb > 0)
 	{
 		ft_putstr(joint);

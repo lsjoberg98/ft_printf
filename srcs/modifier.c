@@ -6,11 +6,15 @@
 /*   By: lsjoberg <lsjoberg@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/22 19:21:12 by lsjoberg          #+#    #+#             */
-/*   Updated: 2020/02/08 18:34:16 by lsjoberg         ###   ########.fr       */
+/*   Updated: 2020/02/10 17:53:05 by lsjoberg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
+
+/*
+**	Checks for flags and sets 1 to thee struct for the flag it found.
+*/
 
 static	void	flags(const char *format, t_struct *f)
 {
@@ -66,6 +70,10 @@ static	void	precision(const char *format, t_struct *f, va_list ap, int nb)
 	while (format[f->i] >= '0' && format[f->i] <= '9')
 		f->i++;
 }
+
+/*
+**	Checks the length letters and asigns the value to f->length
+*/
 
 static	void	length(const char *format, t_struct *f)
 {

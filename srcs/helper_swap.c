@@ -6,11 +6,14 @@
 /*   By: lsjoberg <lsjoberg@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/02 16:16:23 by lsjoberg          #+#    #+#             */
-/*   Updated: 2020/02/08 18:33:53 by lsjoberg         ###   ########.fr       */
+/*   Updated: 2020/02/10 16:35:06 by lsjoberg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
+/*
+**	Removes the plus || minus sign when we dont want to print it
+*/
 
 char	*swap_plus_minus(char *joint, char c, int i)
 {
@@ -20,7 +23,7 @@ char	*swap_plus_minus(char *joint, char c, int i)
 	{
 		c = joint[i];
 		joint[i] = '0';
-		joint[0] = c; 
+		joint[0] = c;
 	}
 	return (joint);
 }
@@ -33,7 +36,7 @@ char	*swap_zero_x_l(char *joint, char c, int i)
 	{
 		c = joint[i];
 		joint[i] = '0';
-		joint[1] = c; 
+		joint[1] = c;
 	}
 	return (joint);
 }

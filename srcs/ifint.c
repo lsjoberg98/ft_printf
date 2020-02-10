@@ -6,12 +6,11 @@
 /*   By: lsjoberg <lsjoberg@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/02 19:02:36 by lsjoberg          #+#    #+#             */
-/*   Updated: 2020/02/08 18:34:05 by lsjoberg         ###   ########.fr       */
+/*   Updated: 2020/02/10 15:40:19 by lsjoberg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
-
 
 static	char	*length_check_int(intmax_t n, t_struct *f, va_list ap)
 {

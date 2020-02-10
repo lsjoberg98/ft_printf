@@ -6,7 +6,7 @@
 /*   By: lsjoberg <lsjoberg@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/24 19:09:40 by lsjoberg          #+#    #+#             */
-/*   Updated: 2020/02/08 18:33:44 by lsjoberg         ###   ########.fr       */
+/*   Updated: 2020/02/10 15:41:54 by lsjoberg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,8 @@ char	*pre_converter(char *str, t_struct *f, char c, int check)
 			(f->plus && !f->sign) ? joint = ft_strjoin("+", str) : 0;
 			(f->sign) ? joint = ft_strjoin("-", str) : 0;
 		}
-		free(str);
-		return (joint);
+	free(str);
+	return (joint);
 }
 
 char	*converter_l(char *str, size_t nb, t_struct *f, char c)

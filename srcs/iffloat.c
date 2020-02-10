@@ -6,11 +6,11 @@
 /*   By: lsjoberg <lsjoberg@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/31 14:58:31 by lsjoberg          #+#    #+#             */
-/*   Updated: 2020/02/08 18:33:56 by lsjoberg         ###   ########.fr       */
+/*   Updated: 2020/02/10 15:36:59 by lsjoberg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"../includes/ft_printf.h"
+#include "../includes/ft_printf.h"
 
 static	char	*length_check_f(long double n, t_struct *f, va_list ap)
 {

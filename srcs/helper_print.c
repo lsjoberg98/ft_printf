@@ -6,11 +6,15 @@
 /*   By: lsjoberg <lsjoberg@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/22 22:31:05 by lsjoberg          #+#    #+#             */
-/*   Updated: 2020/02/08 18:33:49 by lsjoberg         ###   ########.fr       */
+/*   Updated: 2020/02/10 15:44:19 by lsjoberg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
+
+/*
+**	Prints spaces
+*/
 
 void	printspace(t_struct *f, int nb)
 {
@@ -22,6 +26,10 @@ void	printspace(t_struct *f, int nb)
 	}
 }
 
+/*
+** Prints zeroes
+*/
+
 void	printzero(t_struct *f, int nb)
 {
 	while (nb > 0)
@@ -31,6 +39,10 @@ void	printzero(t_struct *f, int nb)
 		f->printed++;
 	}
 }
+
+/*
+** Formats width to an int becase of the star
+*/
 
 void	widthstar(const char *format, t_struct *f, va_list ap)
 {
