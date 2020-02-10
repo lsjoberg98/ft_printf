@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lsjoberg <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: lsjoberg <lsjoberg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 18:32:37 by lsjoberg          #+#    #+#             */
-/*   Updated: 2019/10/15 18:33:39 by lsjoberg         ###   ########.fr       */
+/*   Updated: 2020/02/08 14:09:54 by lsjoberg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 void	ft_putstr(const char *str)
 {
-	ft_putstr_fd(str, 1);
+	if (!str)
+		return ;
+	write(1, str, ft_strlen(str));
 }

@@ -3,52 +3,57 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lsjoberg <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: lsjoberg <lsjoberg@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/17 18:31:40 by lsjoberg          #+#    #+#             */
-/*   Updated: 2019/10/17 18:50:49 by lsjoberg         ###   ########.fr       */
+/*   Updated: 2020/02/10 14:50:32 by lsjoberg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-static int		get_nb_size(unsigned int nb)
+static int	ft_isneg(long n)
 {
-	unsigned int	size;
-
-	size = 0;
-	while (nb >= 10)
-	{
-		nb /= 10;
-		++size;
-	}
-	return (size + 1);
+	if (n < 0)
+		return (1);
+	return (0);
 }
 
-char			*ft_itoa(int nbr)
+static int	ft_len(long n)
 {
-	char			*str;
-	unsigned int	nb;
-	unsigned int	index;
-	unsigned int	size;
+	int	count;
 
-	if (nbr < 0)
-		nb = (unsigned int)(nbr * -1);
-	else
-		nb = (unsigned int)nbr;
-	size = (unsigned int)get_nb_size(nb);
-	index = 0;
-	if (!(str = (char*)malloc(sizeof(char) * (size + 1 + (nbr < 0 ? 1 : 0)))))
-		return (0);
-	if (nbr < 0 && (str[index] = '-'))
-		size++;
-	index = size - 1;
-	while (nb >= 10)
+	count = 1;
+	while (n /= 10)
+		count++;
+	return (count);
+}
+
+char		*ft_itoa(long n)
+{
+	size_t			i;
+	char			*strnb;
+	unsigned int	neg;
+
+	if (n == 0)
+		return (ft_strdup("0"));
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
+	neg = 0;
+	if (ft_isneg(n))
 	{
-		str[index--] = (char)(nb % 10 + 48);
-		nb /= 10;
+		neg = 1;
+		n = n * -1;
 	}
-	str[index] = (char)(nb % 10 + 48);
-	str[size] = '\0';
-	return (str);
+	if (!(strnb = ft_strnew(neg + ft_len(n))))
+		return (NULL);
+	i = neg + ft_len(n) - 1;
+	while (n != 0)
+	{
+		strnb[i--] = n % 10 + '0';
+		n = n / 10;
+	}
+	if (neg)
+		strnb[0] = '-';
+	return (strnb);
 }

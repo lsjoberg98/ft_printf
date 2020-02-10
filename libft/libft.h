@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lsjoberg <lsjoberg@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lsjoberg <lsjoberg@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 16:06:28 by lsjoberg          #+#    #+#             */
-/*   Updated: 2020/02/02 21:22:44 by lsjoberg         ###   ########.fr       */
+/*   Updated: 2020/02/10 14:54:09 by lsjoberg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ void			*ft_memchr(const void *s, int c, size_t n);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
 void			ft_putendl_fd(char const *s, int fd);
 void			ft_putendl(char const *s);
-char			*ft_itoa(int nbr);
+char            *ft_itoa(long n);
 char			**ft_strsplit(char const *s, char c);
 void			*ft_memalloc(size_t size);
 void			ft_memdel(void **ap);
