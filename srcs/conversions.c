@@ -6,11 +6,15 @@
 /*   By: lsjoberg <lsjoberg@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/23 20:33:24 by lsjoberg          #+#    #+#             */
-/*   Updated: 2020/02/08 18:33:37 by lsjoberg         ###   ########.fr       */
+/*   Updated: 2020/02/11 11:29:19 by lsjoberg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
+
+/*
+**	checks the specifier
+*/
 
 void	distributor(t_struct *f, char c, va_list ap)
 {

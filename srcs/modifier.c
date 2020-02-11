@@ -6,7 +6,7 @@
 /*   By: lsjoberg <lsjoberg@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/22 19:21:12 by lsjoberg          #+#    #+#             */
-/*   Updated: 2020/02/10 17:53:05 by lsjoberg         ###   ########.fr       */
+/*   Updated: 2020/02/11 11:29:19 by lsjoberg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,11 @@ static	void	flags(const char *format, t_struct *f)
 		f->space = 0;
 }
 
+/*
+**	if there is a '*' we use widthstar otherwise we convert width to int.
+**	and move the index forward.
+*/
+
 void			width(const char *format, t_struct *f, va_list ap)
 {
 	widthstar(format, f, ap);
@@ -44,6 +49,10 @@ void			width(const char *format, t_struct *f, va_list ap)
 	while (format[f->i] >= '0' && format[f->i] <= '9')
 		f->i++;
 }
+
+/*
+**	
+*/
 
 static	void	precision(const char *format, t_struct *f, va_list ap, int nb)
 {

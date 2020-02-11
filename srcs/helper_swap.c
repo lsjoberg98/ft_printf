@@ -6,13 +6,14 @@
 /*   By: lsjoberg <lsjoberg@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/02 16:16:23 by lsjoberg          #+#    #+#             */
-/*   Updated: 2020/02/10 16:35:06 by lsjoberg         ###   ########.fr       */
+/*   Updated: 2020/02/11 12:40:52 by lsjoberg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 /*
-**	Removes the plus || minus sign when we dont want to print it
+**	Removes the plus || minus sign that can be in the middle of the string
+**	and adds it to the front of the string
 */
 
 char	*swap_plus_minus(char *joint, char c, int i)
@@ -27,6 +28,11 @@ char	*swap_plus_minus(char *joint, char c, int i)
 	}
 	return (joint);
 }
+
+/*
+**	Swaps out the 'x' or 'X' in the string for a '0' and puts the 'x' || 'X'
+**	at position [1]
+*/
 
 char	*swap_zero_x_l(char *joint, char c, int i)
 {
@@ -56,6 +62,10 @@ char	*swap_zero_x_r(char *joint, char c, int i)
 	}
 	return (joint);
 }
+
+/*
+**	Swaps out space for a zero and puts space at joint[0]
+*/
 
 char	*swap_space(char *joint, char c, int i)
 {

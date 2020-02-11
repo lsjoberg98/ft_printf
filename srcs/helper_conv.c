@@ -6,11 +6,16 @@
 /*   By: lsjoberg <lsjoberg@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/24 19:09:40 by lsjoberg          #+#    #+#             */
-/*   Updated: 2020/02/10 15:41:54 by lsjoberg         ###   ########.fr       */
+/*   Updated: 2020/02/11 11:29:19 by lsjoberg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
+
+/*
+**	Check 0 joins 0x with the string to print in hexa.
+**	Check 1 || 2 
+*/
 
 char	*pre_converter(char *str, t_struct *f, char c, int check)
 {
