@@ -1,5 +1,5 @@
 # ft_printf
-### Score 101/100
+### Score 110/100
 ##### Mandatory
 100/100
 ##### Bonus
